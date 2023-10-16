@@ -1,5 +1,6 @@
 n1=int(input("Introduce un número: "))
 n2=int(input("Introduce hasta qué número imprimir: "))
+n3=int(input("Introduce un incremento: "))
 
 cont=n1
 
@@ -17,7 +18,11 @@ while(cont<=n2):
         print(cont,end="-")
     else:
         print(cont,end="")
-    cont=cont+1
+    cont=cont+n3
+    
+#Si el último incremento supera n2, imprime n2 con un mensaje
+if(cont>n2):
+            print(n2,"(El contador Supera la serie)",end="")
         
 #PSEUDOCÓDIGO
 """
@@ -26,7 +31,10 @@ inicio
 	lee n1
 	escribe "Introduce hasta qué número imprimir"
 	lee n2
+    Escribe "Introduce un incremento: "
+    lee n3
 	cont=n1
+    escribe "
 	mientras(n1<0 or n2<0) hacer
 		si(n1<0) entonces
 			escribe "El primer número debe ser mayor a 0"
@@ -42,5 +50,8 @@ inicio
 			escribe cont+end="-"
 		sino
 			escribe cont+end=""
+        cont=cont+n3
+    si(cont>n2) entonces
+		escribe n2+"(El contador Supera la serie)"
 fin
 """

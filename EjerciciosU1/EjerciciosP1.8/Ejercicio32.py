@@ -17,7 +17,7 @@ Inicio
 		Escribe numIni
 		Si (numIni != numFin) entonces
 			Escribe "-"
-                numIni = numIni + 1
+        numIni = numIni + 1
 Fin
 """
 
